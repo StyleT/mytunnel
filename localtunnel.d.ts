@@ -6,8 +6,14 @@ declare interface Tunnel extends EventEmitter {
 
 declare interface BootstrapOpts {
     port: number;
-    allow_invalid_cert?: boolean;
+    host: string;
+    subdomain?: string;
+    local_host?: string;
     local_https?: boolean;
+    local_cert?: string;
+    local_key?: string;
+    local_ca?: string;
+    allow_invalid_cert?: boolean;
 }
 
 export default (opts: BootstrapOpts): Promise<Tunnel>;
