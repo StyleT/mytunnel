@@ -16,4 +16,6 @@ declare interface BootstrapOpts {
     allow_invalid_cert?: boolean;
 }
 
-export default (opts: BootstrapOpts): Promise<Tunnel>;
+declare const localtunnel: (opts: BootstrapOpts) => Promise<Tunnel>;
+
+export default localtunnel;
