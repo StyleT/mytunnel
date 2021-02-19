@@ -14,6 +14,7 @@
     "Tom Coleman <tom@hichroma.com>"
   ],
   "main": "./localtunnel.js",
+  "types": "./localtunnel.d.ts",
   "bin": {
     "lt": "bin/lt.js"
   },
