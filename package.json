@@ -1,13 +1,13 @@
 {
-  "name": "localtunnel",
+  "name": "mytunnel",
   "description": "Expose localhost to the world",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/localtunnel/localtunnel.git"
+    "url": "git://github.com/StyleT/mytunnel.git"
   },
-  "author": "Roman Shtylman <shtylman@gmail.com>",
+  "author": "Vladlen Fedosov <vlad.fedosov@gmail.com>",
   "contributors": [
     "Roman Shtylman <shtylman@gmail.com>",
     "Gert Hengeveld <gert@hichroma.com>",
