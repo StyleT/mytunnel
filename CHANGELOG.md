@@ -1,3 +1,8 @@
+# 3.2.0 (2021-02-20)
+- Added TS typings
+- Rebranded to "mytunnel"
+- Added pings to server to help with dead connections detection.
+
 # 2.0.1 (2021-01-09)
 
 - Upgrade dependencies
