@@ -1,13 +1,13 @@
-# localtunnel
+# mytunnel
 
-localtunnel exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes.
+mytunnel exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes.
 
 Great for working with browser testing tools like browserling or external api callback services like twilio which require a public url for callbacks.
 
 ## Quickstart
 
 ```
-npx localtunnel --port 8000
+npx mytunnel --port 8000
 ```
 
 ## Installation
@@ -15,18 +15,18 @@ npx localtunnel --port 8000
 ### Globally
 
 ```
-npm install -g localtunnel
+npm install -g mytunnel
 ```
 
 ### As a dependency in your project
 
 ```
-yarn add localtunnel
+yarn add mytunnel
 ```
 
 ## CLI usage
 
-When localtunnel is installed globally, just use the `lt` command to start the tunnel.
+When `mytunnel` is installed globally, just use the `lt` command to start the tunnel.
 
 ```
 lt --port 8000
@@ -40,7 +40,7 @@ You can restart your local server all you want, `lt` is smart enough to detect t
 
 Below are some common arguments. See `lt --help` for additional arguments
 
-- `--subdomain` request a named subdomain on the localtunnel server (default is random characters)
+- `--subdomain` request a named subdomain on the mytunnel server (default is random characters)
 - `--local-host` proxy to a hostname other than localhost
 
 You may also specify arguments via env variables. E.x.
@@ -51,17 +51,17 @@ PORT=3000 lt
 
 ## API
 
-The localtunnel client is also usable through an API (for test integration, automation, etc)
+The mytunnel client is also usable through an API (for test integration, automation, etc)
 
-### localtunnel(port [,options][,callback])
+### mytunnel(port [,options][,callback])
 
-Creates a new localtunnel to the specified local `port`. Will return a Promise that resolves once you have been assigned a public localtunnel url. `options` can be used to request a specific `subdomain`. A `callback` function can be passed, in which case it won't return a Promise. This exists for backwards compatibility with the old Node-style callback API. You may also pass a single options object with `port` as a property.
+Creates a new mytunnel to the specified local `port`. Will return a Promise that resolves once you have been assigned a public localtunnel url. `options` can be used to request a specific `subdomain`. A `callback` function can be passed, in which case it won't return a Promise. This exists for backwards compatibility with the old Node-style callback API. You may also pass a single options object with `port` as a property.
 
 ```js
-const localtunnel = require('localtunnel');
+const mytunnel = require('mytunnel');
 
 (async () => {
-  const tunnel = await localtunnel({ port: 3000 });
+  const tunnel = await mytunnel({ port: 3000 });
 
   // the assigned public url for your tunnel
   // i.e. https://abcdefgjhij.localtunnel.me
@@ -75,7 +75,7 @@ const localtunnel = require('localtunnel');
 
 #### options
 
-- `port` (number) [required] The local port number to expose through localtunnel.
+- `port` (number) [required] The local port number to expose through mytunnel.
 - `subdomain` (string) Request a specific subdomain on the proxy server. **Note** You may not actually receive this name depending on availability.
 - `host` (string) URL for the upstream proxy server. Defaults to `https://localtunnel.me`.
 - `local_host` (string) Proxy to this hostname instead of `localhost`. This will also cause the `Host` header to be re-written to this value in proxied requests.
@@ -115,7 +115,7 @@ _C#/.NET_ [localtunnel-client](https://github.com/angelobreuer/localtunnel-clien
 
 ## server
 
-See [localtunnel/server](//github.com/localtunnel/server) for details on the server that powers localtunnel.
+See [mytunnel-server/server](//github.com/StyleT/mytunnel-server) for details on the server that powers mytunnel.
 
 ## License
 
