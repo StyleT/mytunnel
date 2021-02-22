@@ -1,3 +1,6 @@
+# 3.2.1 (2021-02-22)
+- Removed pings to server as they violate correct use of the tcp socket passed to httpAgent
+
 # 3.2.0 (2021-02-20)
 - Added TS typings
 - Rebranded to "mytunnel"
