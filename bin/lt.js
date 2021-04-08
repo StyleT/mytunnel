@@ -49,6 +49,9 @@ const { argv } = yargs
   .option('print-requests', {
     describe: 'Print basic request info',
   })
+  .option('insecure', {
+    describe: 'enable insecure TLS connections for remote connection'
+  })
   .require('port')
   .boolean('local-https')
   .boolean('allow-invalid-cert')
@@ -100,5 +103,8 @@ if (typeof argv.port !== 'number') {
     tunnel.on('request', info => {
       console.log(new Date().toString(), info.method, info.path);
     });
+  }
+  if (argv["insecure"]) {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
 })();
